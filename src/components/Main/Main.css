@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic');
+
+
+.main{
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    background-color: #ffffff;
+    position: relative;
+}
+.main .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    color: #585858;
+}
+.main .nav img{
+    width: 40px;
+    border-radius: 50%;
+}
+.main .nav span{
+    color: chocolate;
+}
+.main-container{
+    max-width: 900px;
+    margin: auto;
+}
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+    position: relative;
+    top: 14px;
+    height: 4px;
+    width: 100%;
+    --c:no-repeat linear-gradient(#6100ee 0 0);
+    background: var(--c),var(--c),#d7b8fc;
+    background-size: 60% 100%;
+    animation: l16 3s infinite;
+  }
+  @keyframes l16 {
+    0%   {background-position:-150% 0,-150% 0}
+    66%  {background-position: 250% 0,-150% 0}
+    100% {background-position: 250% 0, 250% 0}
+  }
+@keyframes l2 {
+  100% {background-position: right -50px top 0}
+}
+.main .greet{
+    margin: 50px 0px;
+    font-size: 56px;
+    color: #094764;
+    font-weight: 500;
+    padding: 20px;
+}
+
+.main .greet span{
+    background: -webkit-linear-gradient(16deg,#e7ac0b,#3780e7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    gap: 15px;
+    padding: 20px;
+}
+.main .card{
+    height: 200px;
+    padding: 15px;
+    background-color: #3670ef;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.main .card img{
+    width: 50%;
+    padding: 5px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 20px;
+    bottom: 10px;
+    left: 25%;
+}
+
+
+.main .card p{
+    color: #ffffff;
+    font-size: 17px;
+}
+.main .card:hover{
+    transform: scale(1.1);
+}
+.main-bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+}
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f0f4f9;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.search-box img{
+    width: 24px;
+    cursor: pointer;
+}
+.search-box input{
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+}
+.search-box div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.main .bottom-info{
+    font-size: 13px;
+    margin: 15px;
+    text-align: center;
+    font-weight: 300;
+}
+
+
+.result{
+    padding: 0px 5%;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+.result::-webkit-scrollbar{
+    display: none;
+}
+
+.result-title{
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.result img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+.result-data{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+.ugu, .gl, .oru {
+    font-family: Inter;
+    font-weight: 600;
+}
+
+
+@keyframes loader{
+    0%{
+        background-position: -800px 0px;
+
+    }
+    100%{
+        background-position: 800px 0px;
+    }
+}
+
+.result-data p{
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+@media (max-width:926px){
+   .main .cards{
+        margin-bottom: 50px;
+    }
+}
+@media (max-width:600px){
+    .main-bottom input{
+        flex: none;
+        width: 150px;
+    }
+    .main-bottom img{
+        width: 20px;
+    }
+    .search-box{
+        padding: 5px 10px;
+    }
+    .search-box div{
+        gap: 5px;
+    }
+}
+@media (max-width:420px){
+    .bottom-info{
+        display: none;
+    }
+    .main .cards{
+        margin-bottom: 0px;
+    }
+    .main-bottom{
+        padding-bottom: 25px;
+    }
+}
+@media (max-width:414px){
+    .main .card img{
+        width: 120px;
+        left: 33%;
+    }  
+}
